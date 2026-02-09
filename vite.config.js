@@ -14,6 +14,7 @@ main: resolve(__dirname, 'index.html'),
 }, 
 }, 
 plugins: [ 
+  tailwindcss(),
 viteImagemin({ 
 gifsicle: { 
 optimizationLevel: 7, 
