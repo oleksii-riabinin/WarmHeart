@@ -1,0 +1,15 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixsins.scss" as *;
+
+.btn{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    width: 250px;
+    background-color: $black;
+    border-radius: 100px;
+    padding: 15px 80px;
+    color:$white;
+    cursor: pointer;
+}

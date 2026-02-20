@@ -1,3 +1,6 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixsins.scss" as *;
+
 
 
 img {
@@ -6,10 +9,21 @@ img {
 }
 body{
   font-family: Lato;
+  margin: 0;
+  
+  background-color: $white;
+  
+  
+}
+a{
+  text-decoration: none;
+  
 }
 .container{
+  
   padding: 0 20px;
   margin: 0;
+
 }
 @media screen and (min-width:1500px){
   .container{
@@ -20,7 +34,10 @@ body{
 
 @media screen and (min-width:1920px) {
   .container {
+    
     padding: 0 350px;
+
 
   }
 }
+

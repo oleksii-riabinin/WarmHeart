@@ -1,164 +1,159 @@
 @use "/src/sass/base/variables.scss" as *;
-@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/mixsins.scss" as *;
 
-.header{
+.header {
+  background-color: $white;
+  padding-top: 30px;
+
   a {
-      text-decoration: none;
-      color:$black;
-    }
-  padding-top: 20px;
-  &__wrapper{
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
   }
-  &__burger{
-    &-desktop{
-      display: none;
-    }
-    &-mobile{
-      display: flex;
-      flex-direction: column;
-      row-gap: 7px;
-      width: 40px;
 
-    }
-    &-big{
-      width: 40px;
-      height: 1px;
-      background-color: $black;
-    }
-    &-medium{
-      width: 30px;
-      height: 1px;
-      background-color: $black;
+  
+  &__burger {
 
-    }
-  }
-  &__title{
-    
-    &-mobile{
-      margin: 0;
-      @include header-title;
-     
-    }
-    
-    
-    &-desktop{
-      display: none;
-    }
-  }
-  &__links{
-    &-desktop{
-      display: none;
-    }
-    &-mobile{
+    &-desktop {
       display: flex;
-      
-      
-    }
-    &-search{
-      // visibility: hidden;
-      display: none;
-    }
-    &-cart{
+      column-gap: 50px;
+      font-weight: 400;
       font-size: 21px;
-      
-
+      color: $black;
     }
-  }
-}
-@media screen and (min-width:480px) {
-  .header{
-    &__title-mobile{
+
+    &-mobile {
       display: none;
     }
-         &__title-desktop{
-          display: block;
-          margin: 0;
-          @include header-title;
-         }
-  }
-}
-@media screen and (min-width:768px) {
-  .header{
-    padding-top: 30px;
-    &__links{
-      &-mobile{
-        column-gap: 30px;
-        
-      }
-      &-search{
-        display: block;
-        font-size: 21px;
-        margin: 0;
-      }
+
+    &-big,
+    &-medium {
+      height: 1px;
+      background-color: $black;
+    }
+
+    &-big {
+      width: 40px;
+    }
+
+    &-medium {
+      width: 30px;
     }
   }
   
-}
+  &__title {
 
-@media screen and (min-width:1000px){
-.header{
-  &__links{
-    &-mobile{
+    &-desktop {
+      display: block;
+      margin: 0;
+      @include header-title;
+    }
+
+    &-mobile {
       display: none;
     }
-    &-desktop{
+  }
+
+ 
+  &__links {
+
+    &-desktop {
       display: flex;
       column-gap: 50px;
-        font-weight: 400;
-        font-size: 21px;
-        color:$black;
+      font-weight: 400;
+      font-size: 21px;
+      color: $black;
+    }
+
+    &-mobile {
+      display: none;
+    }
+
+    &-search {
+      display: block;
+      font-size: 21px;
+    }
+
+    &-cart {
+      font-size: 21px;
     }
   }
-}
+
 }
 
-@media screen and (min-width:1500px){
-  .header{
-    &__burger{
-      &-mobile{
-        display: none;
-      }
-      &-desktop{
-        display: flex;
-        column-gap:30px;
-          font-weight: 400;
-          font-size: 21px;
-          color:$black;
-      }
-     
-    }
-         &__links {
-           &-desktop {
-             column-gap: 30px;
-           }
-         }
-  }
-}
-
-@media screen and (min-width:1920px) {
+@media (max-width: 1500px) {
   .header {
-    &__burger {
-      &-mobile {
-        display: none;
-      }
 
-      &-desktop {
-        display: flex;
-        column-gap: 50px;
-        font-weight: 400;
-        font-size: 21px;
-        color: $black;
-      }
-
+    &__burger-desktop {
+      column-gap: 30px;
     }
+
+    &__links-desktop {
+      column-gap: 30px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .header {
 
     &__links {
       &-desktop {
-        column-gap: 50px;
+        display: none;
+      }
+
+      &-mobile {
+        display: flex;
+        column-gap: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+
+    &__links-search {
+      display: none;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header {
+
+    padding-top: 20px;
+
+    &__title {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
+        margin: 0;
+        @include header-title;
+      }
+    }
+
+    &__burger {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+        width: 40px;
+      }
+    }
+
+    &__links {
+      &-mobile {
+        display: flex;
       }
     }
   }
