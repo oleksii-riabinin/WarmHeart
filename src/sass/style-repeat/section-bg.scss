@@ -1,0 +1,61 @@
+@use "/src/sass/base/variables.scss"as *;
+//тут в нас знаходяться стилы для того щоб задній фон займав всю ширину сторінки
+//але контент знаходився в контейнері
+.section {
+  position: relative; 
+  width: 100%; 
+  overflow: hidden; 
+  &__light {
+    background-color: $white;
+  }
+  &__dark {
+    background-color: $black; 
+    color:$white;
+  }
+  &__accent {
+    background-color: $beige;
+  }
+  /* --- ВАРІАНТ 2: ПОДВІЙНИЙ ФОН  --- */
+  &__split {
+    padding: 0; // Для спліт-секції відступи зазвичай задає сам контент
+  }
+     &__bg {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       display: flex;
+       z-index: 0;
+
+      
+        &-first {
+          width: 60%;
+          height: 100%;
+          background-color: $beige;
+        }
+        &-second {
+          width: 40%;
+          height: 100%;
+          background-color: $black;
+        }
+
+        //  &-column {
+        //  flex-direction: column;
+          
+        //  &-first {
+        //    width: 100%;
+        //    height: 60%;
+        //    }
+          
+        //   &-second {
+        //   width: 100%;
+        //    height: 40%;
+        //    }
+        //    }
+      }
+      }
+
+
+
+  

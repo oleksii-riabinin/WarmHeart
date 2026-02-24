@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1, // СУВОРО ОДНА картинка на екрані!
      // Наступні картинки будуть заховані (прозорі)
 
-  
+  spaceBetween: 30,
   loop: true,
   speed: 600,
   grabCursor: true,
