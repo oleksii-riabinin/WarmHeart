@@ -33,7 +33,7 @@
 
     &-big,
     &-medium {
-      height: 1px;
+      height: 2px;
       background-color: $black;
     }
 
@@ -100,44 +100,57 @@
 }
 @media (max-width: 1000px) {
   .header {
-
-    &__links {
+&__burger{
       &-desktop {
-        display: none;
-      }
+display: none;
+        }
+      
+        &-mobile {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+        }
+}
 
-      &-mobile {
-        display: flex;
-        column-gap: 30px;
-      }
-    }
   }
 }
 @media (max-width: 768px) {
   .header {
-
-    &__links-search {
-      display: none;
-    }
+        &__links {
+            &-desktop {
+              display: none;
+            }
+        
+            &-mobile {
+              display: flex;
+              column-gap: 30px;
+              svg{
+                display: block;
+              }
+            }
+            &-search{
+            display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+            &-cart{
+              display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                column-gap:10px;
+            }
+          }
+ 
   }
 }
 @media (max-width: 480px) {
   .header {
-
     padding-top: 20px;
-
-    &__title {
-      &-desktop {
-        display: none;
-      }
-
-      &-mobile {
-        display: block;
-        margin: 0;
-        @include header-title;
-      }
+    &__title{
+      font-size: 28px;
     }
-
     &__burger {
       &-desktop {
         display: none;
@@ -155,6 +168,25 @@
       &-mobile {
         display: flex;
       }
+      &-search{
+        display: none;
+      }
     }
+  }
+}
+
+@media screen and (max-width:360px) {
+  .header{
+      &__title {
+          &-desktop {
+            display: none;
+          }
+      
+          &-mobile {
+            display: block;
+            margin: 0;
+            @include header-title;
+          }
+        }
   }
 }

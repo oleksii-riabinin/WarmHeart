@@ -62,25 +62,29 @@
                 visibility: hidden;
                 transition: all 0.3s ease;
                      }
-    &:hover,&:active {
-      cursor: pointer; // cite
-      border-radius: 50%; // cite (Робить контейнер круглим)
-  
-      img {
-        width: 320px;
-        height: 330px;
-      transform:  rotate(5deg);
-      position: absolute;
-      bottom:40px ;
-      left: 40px;
-      }
-  
-      // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
-      &::after {
-        opacity: 1; // cite (Робимо видимим)
-        visibility: visible; // cite
-      }
-    }
+
+                     @media(hover:hover){
+                          &:hover,
+                            &:active {
+                              cursor: pointer; // cite
+                              border-radius: 50%; // cite (Робить контейнер круглим)
+                          
+                              img {
+                                width: 320px;
+                                height: 330px;
+                                transform: rotate(5deg);
+                                position: absolute;
+                                bottom: 40px;
+                                left: 40px;
+                              }
+                          
+                              // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
+                              &::after {
+                                opacity: 1; // cite (Робимо видимим)
+                                visibility: visible; // cite
+                              }
+                            }
+                     }
   }
   &__informastion{
     margin-top: 20px;
@@ -134,11 +138,11 @@ span{
     margin-top: 115px;
       &__title {
           font-weight: 900;
-          font-size: 40px;
+          font-size: 48px;
           margin: 0;
         }
     &__swiper{
-      margin-top: 45px;
+      margin-top: 50px;
     }
 
  &__img {
@@ -268,4 +272,173 @@ span{
    }
  }
   }
+}
+
+@media screen and (max-width:1000px) {
+  .products{
+    margin-top: 90px;
+    &__img {
+        background-color: $beige;
+        // padding: 60px;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        border-radius: 25px;
+        position: relative;
+        transition: border-radius 0.4s ease;
+        
+        img {
+          width: 200px;
+          padding-top: 50px;
+          margin: auto;
+          height: auto;
+          transition: transform 0.4s ease;
+        }
+    
+        &::after {
+          content: "";
+          /* Залишаємо порожнім, іконки-шрифту більше немає */
+          position: absolute;
+          top: 15px;
+          left: 260px;
+    
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $black;
+          z-index: 2;
+    
+          /* === МАГІЯ ПЛЮСИКА === */
+          background-image:
+            linear-gradient($white, $white),
+            /* Вертикальний блок-лінія */
+            linear-gradient($white, $white);
+          /* Горизонтальний блок-лінія */
+    
+          background-size:
+            2px 20px,
+            /* Вертикальна: товщина 2px, висота 20px */
+            20px 2px;
+          /* Горизонтальна: ширина 20px, товщина 2px */
+    
+          background-position: center;
+          /* Центруємо обидві лінії */
+          background-repeat: no-repeat;
+          /* Щоб вони не розмножувались */
+    
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+        }
+    
+        &:hover,
+        &:active {
+          cursor: pointer; // cite
+          border-radius: 50%; // cite (Робить контейнер круглим)
+    
+          img {
+            width: 255px;
+            height: 255px;
+            transform: rotate(5deg);
+            position: absolute;
+            bottom: 35px;
+            left: 35px;
+          }
+    
+          // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
+          &::after {
+            opacity: 1; // cite (Робимо видимим)
+            visibility: visible; // cite
+          }
+        }
+      }
+
+                &__controls {
+                  margin-top: 50px;
+                  justify-content: center;
+                  align-items: center;
+                  display: flex;
+        
+                  &-arrow {
+                  display: none;
+
+                  }
+        
+                  &-pagination {
+                    display: flex;
+                    column-gap: 30px;
+                    position: static;
+                    position: static;
+                    width: auto !important;
+        
+                    span {
+                      width: 16px;
+                      height: 16px;
+                      background-color: $dis-active;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      transition: 0.3s;
+        
+                      &:active {
+                        background-color: $black;
+                      }
+                    }
+                  }
+                }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .products{
+    margin-top: 90px;
+        &__img {
+          display: flex;
+            background-color: $beige;
+            // padding: 60px;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            border-radius: 25px;
+            position: relative;
+            transition: border-radius 0.4s ease;
+        
+            img {
+              width: 255px;
+              padding-top: 0;
+              margin: auto;
+              height: auto;
+              transition: transform 0.4s ease;
+            }
+        
+   
+          }
+  }
+}
+
+@media screen and (max-width:480px){
+    .products {
+        margin-top: 70px;
+    
+        &__img {
+          display: flex;
+          background-color: $beige;
+          // padding: 60px;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 1 / 1;
+          border-radius: 25px;
+          position: relative;
+          transition: border-radius 0.4s ease;
+    
+          img {
+            width: 255px;
+            padding-top: 0;
+            margin: auto;
+            height: auto;
+            transition: transform 0.4s ease;
+          }
+    
+    
+        }
+      }
 }

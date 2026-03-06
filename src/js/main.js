@@ -5,8 +5,13 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css'; 
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import feather from 'feather-icons';
 import "/src/sass/ui/style.scss"; 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  feather.replace();
+});
 
 const swiperHero = new Swiper('.hero__slider', {
   // configure Swiper to use modules
@@ -44,4 +49,20 @@ const swiperProducts = new Swiper('.products__swiper', {
     nextEl: '.arrow-right',
     prevEl: '.arrow-left',
   },
+
+
+  breakpoints:{
+    
+    480:{
+      spaceBetween:20,
+       slidesPerView: 2
+      
+    },
+    1001:{
+        slidesPerView: 3, // СУВОРО ОДНА картинка на екрані!
+     // Наступні картинки будуть заховані (прозорі)
+
+  spaceBetween: 30,
+    }
+  }
 });
