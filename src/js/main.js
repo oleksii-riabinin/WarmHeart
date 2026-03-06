@@ -52,13 +52,15 @@ const swiperProducts = new Swiper('.products__swiper', {
 
 
   breakpoints:{
-    
+    360:{
+slidesPerView: 1
+    },
     480:{
       spaceBetween:20,
        slidesPerView: 2
       
     },
-    1001:{
+    1000:{
         slidesPerView: 3, // СУВОРО ОДНА картинка на екрані!
      // Наступні картинки будуть заховані (прозорі)
 

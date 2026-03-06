@@ -63,7 +63,7 @@
                 transition: all 0.3s ease;
                      }
 
-                     @media(hover:hover){
+                     
                           &:hover,
                             &:active {
                               cursor: pointer; // cite
@@ -84,7 +84,7 @@
                                 visibility: visible; // cite
                               }
                             }
-                     }
+                     
   }
   &__informastion{
     margin-top: 20px;
@@ -277,6 +277,9 @@ span{
 @media screen and (max-width:1000px) {
   .products{
     margin-top: 90px;
+    &__swiper{
+      margin-top: 50px;
+    }
     &__img {
         background-color: $beige;
         // padding: 60px;
@@ -288,8 +291,8 @@ span{
         transition: border-radius 0.4s ease;
         
         img {
-          width: 200px;
-          padding-top: 50px;
+          width: 207px;
+          // padding-top: 50px;
           margin: auto;
           height: auto;
           transition: transform 0.4s ease;
@@ -391,7 +394,11 @@ span{
 @media screen and (max-width:768px) {
   .products{
     margin-top: 90px;
+    &__swiper{
+      margin-top: 50px;
+    }
         &__img {
+          // margin-top: 50px;
           display: flex;
             background-color: $beige;
             // padding: 60px;
@@ -409,7 +416,46 @@ span{
               height: auto;
               transition: transform 0.4s ease;
             }
+                &::after {
+                  content: "";
+                  /* Залишаємо порожнім, іконки-шрифту більше немає */
+                  position: absolute;
+                  top: 15px;
+                  left: 300px;
         
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background-color: $black;
+                  z-index: 2;
+        
+                  /* === МАГІЯ ПЛЮСИКА === */
+                  background-image:
+                    linear-gradient($white, $white),
+                    /* Вертикальний блок-лінія */
+                    linear-gradient($white, $white);
+                  /* Горизонтальний блок-лінія */
+        
+                  background-size:
+                    2px 20px,
+                    /* Вертикальна: товщина 2px, висота 20px */
+                    20px 2px;
+                  /* Горизонтальна: ширина 20px, товщина 2px */
+        
+                  background-position: center;
+                  /* Центруємо обидві лінії */
+                  background-repeat: no-repeat;
+                  /* Щоб вони не розмножувались */
+        
+                  opacity: 1;
+                  visibility: visible;
+                  transition: all 0.3s ease;
+
+                }
+                &:hover,
+                &:active{
+                  transform:none;
+                }
    
           }
   }
@@ -418,7 +464,12 @@ span{
 @media screen and (max-width:480px){
     .products {
         margin-top: 70px;
-    
+        &__swiper{
+          margin-top: 40px;
+        }
+    &__title{
+      font-size: 40px;
+    }
         &__img {
           display: flex;
           background-color: $beige;
@@ -431,14 +482,72 @@ span{
           transition: border-radius 0.4s ease;
     
           img {
-            width: 255px;
+            width: 160px;
             padding-top: 0;
             margin: auto;
             height: auto;
             transition: transform 0.4s ease;
           }
     
-    
+              &::after {
+              content: "";
+              position: absolute;
+              top: 15px;
+              left: 170px;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background-color: $black;
+              z-index: 2;
+              background-image:
+              linear-gradient($white, $white),
+              linear-gradient($white, $white);
+              background-size:
+              2px 15px,
+              15px 2px;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 1;
+             visibility: visible;
+            transition: all 0.3s ease;
+           }
+        }
+        &__informastion{
+          &-title{
+            font-size: 20px;
+          }
+          &-size{
+            font-size: 17px;
+          }
+        }
+        &__controls{
+          margin-top: 40px;
         }
       }
+}
+
+@media screen and (max-width:360px){
+  .products{
+    &__title{
+      font-size: 36px;
+    }
+    &__img{
+      img{
+        width: 240px;
+      }
+                                        &::after {
+                                          content: "";
+                                          position: absolute;
+                                          top: 15px;
+                                          left: 270px;
+                                          width: 40px;
+                                          height: 40px;
+                       
+                                          background-size:
+                                            2px 20px,
+                                            20px 2px;
+                                         
+                                        }
+    }
+  }
 }
