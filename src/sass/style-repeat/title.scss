@@ -1,0 +1,74 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.title-black{
+  font-weight: 900;
+  color:$black;
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+}
+.title-white{
+    font-weight: 900;
+      color: $white;
+      font-size: 48px;
+      text-align: center;
+      margin: 0;
+}
+.text-black{
+    font-weight: 400;
+    font-size: 21px;
+    color:$black;
+    text-align: center;
+    margin: 0;
+}
+.text-white{
+      font-weight: 400;
+        font-size: 21px;
+        color: $white;
+        text-align: center;
+        margin: 0;
+}
+@media screen and (max-width:480px) {
+  .title-black {
+      font-weight: 900;
+      color: $black;
+      font-size: 40px;
+      
+    }
+  
+    .title-white {
+      font-weight: 900;
+      color: $white;
+      font-size: 40px;
+      text-align: left;
+    }
+  
+    .text-black {
+      font-weight: 400;
+      font-size: 17px;
+      color: $black;
+      
+    }
+  
+    .text-white {
+      font-weight: 400;
+      font-size: 17px;
+      color: $white;
+    text-align: left;
+    }
+}
+@media screen and (max-width:360px) {
+  .title-black {
+      font-weight: 900;
+      color: $black;
+      font-size: 36px;
+  
+    }
+  
+    .title-white {
+      font-weight: 900;
+      color: $white;
+      font-size: 36px;
+      text-align: left;
+    }
+}

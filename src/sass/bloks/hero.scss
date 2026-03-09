@@ -1,13 +1,18 @@
 @use "/src/sass/base/variables.scss" as *;
 @use "/src/sass/base/mixsins.scss" as *;
 
-.section__bg-second{
-  background: url("/src/sass/img/bg.png")  center / cover;
-}
 .section{
   margin-top: 30px;
   z-index: 20;
   overflow: visible !important;
+  &__bg{
+    &-first-hero{
+      background-color: $beige;
+    }
+    &-second-hero{
+      background: url("/src/sass/img/bg.png") center / cover;
+    }
+  }
 }
 .hero {
   overflow: visible !important;
@@ -394,3 +399,5 @@
                     
     
   }
+
+  

@@ -4,7 +4,7 @@
 .section {
   position: relative; 
   width: 100%; 
-  overflow: hidden; 
+   
   &__light {
     background-color: $white;
   }
@@ -32,27 +32,15 @@
         &-first {
           width: 60%;
           height: 100%;
-          background-color: $beige;
+          // background-color: $beige;
         }
         &-second {
           width: 40%;
           height: 100%;
-          background-color: $black;
+          // background-color: $black;
         }
 
-        //  &-column {
-        //  flex-direction: column;
-          
-        //  &-first {
-        //    width: 100%;
-        //    height: 60%;
-        //    }
-          
-        //   &-second {
-        //   width: 100%;
-        //    height: 40%;
-        //    }
-        //    }
+
       }
       }
 
