@@ -22,6 +22,7 @@ column-gap:50px;
   // z-index: 1;
   }
 &__inform{
+  
   &-text{
     margin-top: 30px;
   }
@@ -78,4 +79,246 @@ img{
     
   }
 }
+}
+
+@media screen and (max-width:1000px) {
+  .features {
+      @include background;
+      background: linear-gradient(to bottom,
+          $black 757px,
+          $beige 389px); //або замість to bottom можемо писати to right(якщо треба щоб наші заднії фони були в лінію)
+  
+      margin-top: 110px;
+  
+      &__first {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        column-gap: 55px;
+        row-gap: 55px;
+        padding-top: 90px;
+        padding-bottom: 45px;
+        position: relative;
+        // z-index: 1;
+      }
+  
+      &__inform {
+        grid-column: span 2;
+          width:633px;
+      }
+  
+      &__img {
+        width: 379px;
+  
+        transform: rotate(-7deg);
+      }
+  
+      &__details {
+        &-title {
+          color: $white;
+          margin: 0;
+          font-weight: 900;
+          font-size: 36px;
+  
+        }
+  
+        &-text {
+          margin-top: 30px;
+  
+          span {
+            display: block;
+            margin-top: 30px;
+          }
+        }
+  
+        &-button {
+          width: 263px;
+          margin-top: 45px;
+          padding: 13px 80px;
+          background-color: $white;
+          border: none;
+          border-radius: 100px;
+          cursor: pointer;
+        }
+      }
+  
+      &__icon {
+        background-color: $white;
+        width: 150px;
+        height: 150px;
+        border: 3px solid $black;
+        border-radius: 100%;
+        margin: 0 auto;
+  
+        img {
+          padding: 30px;
+          width: 88px;
+        }
+      }
+  
+      &__second {
+  
+        width: 802px;
+        margin: 55px auto 0 auto;
+  
+        &-text {
+          margin-top: 30px;
+  
+        }
+      }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .features {
+        @include background;
+        grid-template-columns:  1fr 1fr ;
+        background: linear-gradient(to bottom,
+            $black 786px,
+            $beige 389px);
+         
+                &__inform {
+                    grid-column: span 2;
+                    width: 580px;
+                  } 
+
+        &__img{
+          width: 297px;
+          align-self:center;
+          justify-self: center;
+        }
+    &__details{
+    &-title{
+        font-weight: 900;
+        font-size: 36px;
+    }  
+    }
+
+    }
+}
+
+@media screen and (max-width:480px){
+    .features {
+        @include background;
+      margin-top: 90px;
+        background: linear-gradient(to bottom,
+            $black 1000px,
+            $beige 380px);
+    
+    &__first{
+      display: flex;
+      flex-direction: column;
+      padding-top: 70px;
+      row-gap: 40px;
+      padding-bottom: 90px;
+    }
+    &__inform{
+      width: 440px;
+      &-text{
+        margin-top: 20px;
+      }
+    }
+    &__icon{
+      width: 100px;
+      height: 100px;
+      
+      img {
+          padding: 22px ;
+          width: 56px;
+        }
+    }
+        &__img {
+          width: 343px;
+          justify-self:flex-start;
+        }
+    
+        &__details {
+          width: 328px;
+          &-title {
+            font-weight: 900;
+            font-size: 28px;
+          }
+          &-text{
+            margin-top: 20px;
+            span{
+              margin-top: 20px;
+            }
+          }
+        }
+    
+        &__second{
+          display: flex;
+          flex-direction: column;
+            width: 440px;
+              margin: 20px auto 0 auto;
+        &-text{
+          margin-top: 20px;
+        }
+        }
+      }
+}
+
+@media screen and (max-width:360px){
+.features {
+    @include background;
+    margin-top: 90px;
+    background: linear-gradient(to bottom,
+        $black 1000px,
+        $beige 380px);
+
+    &__first {
+      display: flex;
+      flex-direction: column;
+      padding-top: 70px;
+      row-gap: 40px;
+      padding-bottom: 90px;
+    }
+
+    &__inform {
+      width: 320px;
+
+      &-text {
+        margin-top: 20px;
+      }
+    }
+
+    &__icon {
+      width: 100px;
+      height: 100px;
+
+      img {
+        padding: 22px;
+        width: 56px;
+      }
+    }
+
+    &__img {
+      width: 307px;
+      justify-self: flex-start;
+    }
+
+    &__details {
+      width: 320px;
+
+      &-title {
+        font-weight: 900;
+        font-size: 28px;
+      }
+
+      &-text {
+        margin-top: 20px;
+
+        span {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__second {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      
+    }
+  }
 }

@@ -28,6 +28,19 @@
         text-align: center;
         margin: 0;
 }
+
+@media screen and (max-width:1000px){
+
+
+  .title-white {
+text-align: left;
+  }
+
+  .text-white {
+text-align: left;
+  }
+}
+
 @media screen and (max-width:480px) {
   .title-black {
       font-weight: 900;
@@ -40,7 +53,7 @@
       font-weight: 900;
       color: $white;
       font-size: 40px;
-      text-align: left;
+     
     }
   
     .text-black {
@@ -54,7 +67,7 @@
       font-weight: 400;
       font-size: 17px;
       color: $white;
-    text-align: left;
+    
     }
 }
 @media screen and (max-width:360px) {
@@ -69,6 +82,6 @@
       font-weight: 900;
       color: $white;
       font-size: 36px;
-      text-align: left;
+      
     }
 }

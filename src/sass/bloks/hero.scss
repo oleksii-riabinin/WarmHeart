@@ -177,49 +177,49 @@
   }
 }
 
-@media screen and (max-width:1500px) {
-  .hero{
-    &__wrapper{
-      // margin-bottom: 90px;
-      min-height: 600px;
-    }
-    &__img{
-      width: 300px;
-      height: 290px;
-    }
-    &__visual{
-      top: 50%;
+// @media screen and (max-width:1500px) {
+//   .hero{
+//     &__wrapper{
+//       // margin-bottom: 90px;
+//       min-height: 600px;
+//     }
+//     &__img{
+//       width: 300px;
+//       height: 290px;
+//     }
+//     &__visual{
+//       top: 50%;
       
-         left:70%;// Центр картинки зміщений на лінію стику кольорів (60%)
-        transform: translate(-40%, -50%) rotate(10deg);
-          &::before {
-              top: -55px;
-              left: -20px;
-              border-top-left-radius: 100px;
-              border-top: 2px solid $black;
-              border-left: 2px solid $black;
-            }
+//          left:70%;// Центр картинки зміщений на лінію стику кольорів (60%)
+//         transform: translate(-40%, -50%) rotate(10deg);
+//           &::before {
+//               top: -55px;
+//               left: -20px;
+//               border-top-left-radius: 100px;
+//               border-top: 2px solid $black;
+//               border-left: 2px solid $black;
+//             }
           
-            /* 2. Нижня права дуга (біла) */
-            &::after {
-              bottom: -55px;
-              right: 50px;
-              border-bottom-right-radius: 100px;
-              border-bottom: 2px solid $white;
-              border-right: 2px solid $white;
-            }
-    }
- &__content{
-  // margin-top: 120px;
-  &-title{
-    font-size: 55px;
-  }
-  &-desk{
-    font-size: 19px;
-  }
- }
-  }
-}
+//             /* 2. Нижня права дуга (біла) */
+//             &::after {
+//               bottom: -55px;
+//               right: 50px;
+//               border-bottom-right-radius: 100px;
+//               border-bottom: 2px solid $white;
+//               border-right: 2px solid $white;
+//             }
+//     }
+//  &__content{
+//   // margin-top: 120px;
+//   &-title{
+//     font-size: 55px;
+//   }
+//   &-desk{
+//     font-size: 19px;
+//   }
+//  }
+//   }
+// }
 
 @media screen and (max-width:1000px){
 .hero{
