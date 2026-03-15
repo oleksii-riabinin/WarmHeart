@@ -8,7 +8,7 @@
   background: linear-gradient(to bottom,
       $black 700px,
       $beige 459px);//або замість to bottom можемо писати to right(якщо треба щоб наші заднії фони були в лінію)
-
+  padding-bottom: 150px;
   margin-top: 150px;
   
   &__first{
@@ -87,7 +87,7 @@ img{
       background: linear-gradient(to bottom,
           $black 757px,
           $beige 389px); //або замість to bottom можемо писати to right(якщо треба щоб наші заднії фони були в лінію)
-  
+      padding-bottom: 120px;
       margin-top: 110px;
   
       &__first {
@@ -204,7 +204,7 @@ img{
         background: linear-gradient(to bottom,
             $black 1000px,
             $beige 380px);
-    
+    padding-bottom: 90px;
     &__first{
       display: flex;
       flex-direction: column;
