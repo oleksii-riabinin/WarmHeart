@@ -1,0 +1,195 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.sale{
+  background-color: $beige;
+  padding: 130px 0 140px 0;
+  &__wrapper{
+    display: flex;
+    column-gap: 60px;
+  }
+  &__action{
+    width: 679px;
+    &-title{
+        font-weight: 900;
+        font-size: 48px;
+        color:$black;
+        margin: 0;
+    }
+    &-text{
+      font-weight: 400;
+      font-size: 21px;
+      color:$black;
+      margin: 0;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__form{
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    &-email{
+      color:$black;
+      // height: 30px;
+      padding: 0 16px 16px 0;
+      border: none;
+      font-size: 20px;
+      border-bottom:4px $black solid;
+      background-color: inherit;
+        &::placeholder {
+            color:$dis-active;
+            font-weight: 400;
+            font-size: 21px;
+          }
+    }
+      &-button{
+        width: 226px;
+        margin-top: 45px;
+        height: 60px;
+      } 
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .sale {
+
+      padding: 90px 0 120px 0;
+  
+      &__wrapper {
+        display: flex;
+        column-gap: 50px;
+      }
+  
+      &__action {
+        width: 470px;
+        &-title{
+          display: flex;
+          flex-direction: row;
+        }
+      }
+  
+      &__form {
+        width: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-email {
+          color: $black;
+          // height: 30px;
+          padding: 0 16px 16px 0;
+          border: none;
+          font-size: 20px;
+          border-bottom: 4px $black solid;
+          background-color: inherit;
+  
+          &::placeholder {
+            color: $dis-active;
+            font-weight: 400;
+            font-size: 21px;
+          }
+        }
+  
+        &-button {
+          width: 226px;
+          margin-top: 45px;
+          height: 60px;
+        }
+      }
+    }
+}
+
+@media screen and (max-width:768px){
+.sale {
+    &__wrapper {
+      display: flex;
+      row-gap: 60px;
+      flex-direction: column;
+    }
+
+    &__action {
+      width: 728px;
+      &-text {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__form {
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width:480px){
+.sale {
+    padding: 70px 0 90px 0;
+
+    &__wrapper {
+      row-gap: 40px;
+    }
+
+    &__action {
+      width: 440px;
+
+      &-title {
+        font-size: 40px;
+      }
+
+      &-text {
+        font-size: 17px;
+        margin-top: 20px;
+      }
+    }
+
+    &__form {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+
+      &-email {
+        color: $black;
+        // height: 30px;
+        padding: 0 16px 16px 0;
+        border: none;
+        font-size: 17px;
+        border-bottom: 4px $black solid;
+        background-color: inherit;
+
+        &::placeholder {
+          color: $dis-active;
+          font-weight: 400;
+          font-size: 17px;
+        }
+      }
+
+      &-button {
+        width: 214px;
+        margin-top: 40px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:360px) {
+  .sale {
+
+      &__action {
+        width: 320px;
+        &-title {
+          font-size: 36px;
+        }
+        &-text {
+          display: flex;
+        }
+      }
+      &__form {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+}
