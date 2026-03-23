@@ -68,3 +68,24 @@ slidesPerView: 1
     }
   }
 });
+
+
+// Знаходимо всі наші випадаючі списки у футері
+const footerAccordions = document.querySelectorAll('.accordion');
+
+// Функція, яка перевіряє ширину екрана
+function handleFooterAccordions() {
+  if (window.innerWidth >= 768) {
+    // Якщо екран ПК (>= 768px) — примусово ВІДКРИВАЄМО всі списки
+    footerAccordions.forEach(acc => acc.setAttribute('open', ''));
+  } else {
+    // Якщо це телефон (< 768px) — ЗАКРИВАЄМО всі списки (крім тих, що ти сам хочеш залишити відкритими)
+    footerAccordions.forEach(acc => acc.removeAttribute('open'));
+  }
+}
+
+// Запускаємо перевірку одразу при завантаженні сторінки
+handleFooterAccordions();
+
+// Також запускаємо її, якщо користувач розтягує/звужує вікно браузера
+window.addEventListener('resize', handleFooterAccordions);

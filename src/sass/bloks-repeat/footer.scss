@@ -1,1 +1,279 @@
 @use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixsins.scss" as *;
+
+.footer{
+  background-color: $black;
+  padding: 150px 0 155px 0;
+  &__botton{
+    display: none;
+  }
+  &__wrapper{
+    display: flex;
+    column-gap:158px;
+  }
+  &__links{
+    &-title{
+      @include header-footer;
+      margin: 0;
+    }
+    &-social{
+      display: flex;
+      column-gap: 15px;
+      margin-top: 30px;
+      a{
+        display: block;
+        border-radius: 500px;
+          width: 40px;
+          height: 40px;
+          background-color: $white;
+          color:$black;
+          
+          svg{
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            
+          }
+      }
+    }
+    &-privacy{
+        font-weight: 400;
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 57px;
+        row-gap:20px;
+        a{
+          color: $dis-active;
+        }
+    }
+  }
+  &__menu{
+    display: flex;
+    column-gap: 158px;
+  }
+
+}
+.accordion{
+  min-width: 100px;
+  max-width: 205px;
+  &__header{
+    list-style: none;
+      font-weight: 700;
+      font-size: 24px;
+      color:$white
+  }
+  &__icon{
+    display: none;
+  }
+  &__list{
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+
+    li{
+      list-style: none;
+      margin-top: 25px;
+     
+      a{
+        font-weight: 400;
+        font-size: 21px;
+        color: $white;
+      }
+    }
+  }
+    &[open] {
+      .accordion__icon {
+        /* Перевертаємо іконку догори дриґом! */
+        transform: rotate(180deg);
+      }
+    }
+}
+
+@media screen and (max-width:1700px) {
+  .footer {
+    &__wrapper {
+      display: flex;
+      column-gap: 148px;
+    }
+
+    &__links {
+      &-title {
+        text-align: left;
+        width: 247px;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      column-gap: 148px;
+    }
+
+  }
+
+  .accordion {
+    min-width: 100px;
+    max-width: 205px;
+
+  }
+}
+
+
+@media screen and (max-width:1000px) {
+  .footer {
+    padding: 90px 0 120px 0;
+      &__wrapper {
+        display: flex;
+        column-gap: 80px;
+      }
+
+      &__menu {
+        display: flex;
+        column-gap: 79px;
+      }
+  
+    } 
+    .accordion {
+      min-width: 84px;
+      max-width: 205px;
+
+    }
+}
+
+@media screen and (max-width:768px){
+.footer {
+    padding: 90px 0 50px 0;
+
+    &__botton {
+              font-weight: 400;
+                font-size: 17px;
+                display: flex;
+                column-gap:50px;
+                a {
+                  color: $dis-active;
+                }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+     row-gap: 50px;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+     width: 447px;
+
+      &-title {
+        @include header-footer;
+        text-align: left;
+        
+      }
+      &-social {
+        display: flex;
+        margin-top: 0;
+      }
+      &-privacy {
+display: none;
+      }
+    }
+    &__menu {
+      column-gap: 126px;
+    }
+  }
+  .accordion {
+    min-width: 84px;
+    max-width: 205px;
+  }
+}
+
+@media screen and (max-width:480px){
+.footer {
+    padding: 70px 0 40px 0;
+    &__botton {
+        font-weight: 400;
+        font-size: 15px;
+        display: flex;
+        column-gap: 40px;
+    
+        a {
+          color: $dis-active;
+        }
+      }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+      }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      row-gap:20px ;
+    }
+
+  }
+
+  .accordion {
+    max-width: 440px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid $dis-active;
+
+    &__header {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__icon {
+      display: block;
+    }
+
+    &__list {
+      margin: 0;
+      margin-top: 30px;
+      padding: 0;
+
+      li {
+        list-style: none;
+        margin-top: 20px;
+
+        a {
+          font-weight: 400;
+          font-size: 17px;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:360px) {
+  .footer {
+    &__botton {
+      column-gap: 30px;
+    }
+                &__links {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 270px;
+                &-social {
+                 display: flex;
+                  margin-top: 30px;
+                 }
+                }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+  }
+  .accordion {
+    max-width: 320px;
+    &__list {
+      margin-top: 20px;
+    }
+  }
+}
