@@ -1,0 +1,96 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.catalog{
+  margin-top: 60px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__desktop{
+    display: flex;
+    column-gap: 50px;
+  }
+  &__filter{
+    position: relative;
+   &-title{
+    list-style: none;
+    display: flex;
+    column-gap: 15px;
+    cursor: pointer;
+      font-weight: 400;
+      font-size: 21px;
+      color:$black;
+      align-items: center;
+   }
+   &-icon{
+    transition: transform 0.3s ease;
+    display: block;
+    width: 20px;
+    height: 20px;
+   }
+             &[open] {
+               .catalog__filter-icon {
+                 /* Перевертаємо іконку догори дриґом! */
+                 transform: rotate(180deg);
+               }
+             }
+    &-list {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 0;
+      z-index: 10;
+      background-color: $white;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 0;
+      list-style: none;
+      min-width: 200px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+  
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 21px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color:  $dis-active;
+        }
+      }
+      &-icon{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__meta{
+    display: flex;
+    column-gap:50px;
+    &-count{
+        font-weight: 400;
+        font-size: 21px;
+        color:$black;
+    }
+    &-views{
+      display: flex;
+      column-gap:15px;
+      &-grid{
+        width: 27px;
+        height: 27px;
+        color:$black;
+      }
+      &-server{
+        width: 27px;
+        height: 27px;
+            color:$dis-active;    
+      }
+    }
+  }
+}
+#filter-mobile{
+  display: none;
+}
