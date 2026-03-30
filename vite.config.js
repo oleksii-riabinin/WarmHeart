@@ -10,7 +10,7 @@ build: {
 rollupOptions: { 
 input: { 
 main: resolve(__dirname, 'index.html'), 
-
+shop: "shop.html"
 }, 
 }, 
 }, 

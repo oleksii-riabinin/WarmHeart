@@ -1,0 +1,102 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.shop{
+      background-color: $beige;
+  &__header{
+    display: flex;
+      padding: 55px 0 60px;
+      margin-top: 30px;
+    align-items: center;
+    column-gap: 60px;
+    &-title{
+        font-weight: 900;
+        font-size: 60px;
+        color:$black;
+    }
+    &-text{
+      width: 636px;
+        font-weight: 400;
+        font-size: 21px;
+        color:$black;
+    }
+  }
+}
+
+@media screen and (max-width:1700px) {
+  .shop {
+    &__header {
+      padding: 45px 0 50px;
+      column-gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width:1000px) {
+.shop {
+    &__header {
+      padding: 45px 0 50px;
+      column-gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .shop {
+
+    &__header {
+      
+      padding: 30px 0 50px;
+      &-title {
+        font-weight: 900;
+        font-size: 60px;
+        color: $black;
+      }
+
+      &-text {
+        width: 542px;
+        font-weight: 400;
+        font-size: 21px;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px){
+  .shop {
+      &__header {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 40px;
+        margin-top: 20px;
+        align-items: flex-start;
+        row-gap: 10px;
+  
+        &-title {
+          font-size: 48px;
+        }
+  
+        &-text {
+          width: 440px;
+          font-size: 17px;
+        }
+      }
+    }
+}
+
+@media screen and (max-width:360px) {
+  .shop {
+    &__header {
+      padding: 25px 0 40px;
+      &-title {
+        font-size: 40px;
+      }
+
+      &-text {
+        width: 320px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+

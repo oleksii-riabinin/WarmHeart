@@ -4,7 +4,7 @@
 .header {
   background-color: $white;
   padding-top: 30px;
-
+  
   a {
     text-decoration: none;
     color: $black;
@@ -21,10 +21,12 @@
 
     &-desktop {
       display: flex;
-      column-gap: 50px;
       font-weight: 400;
       font-size: 21px;
       color: $black;
+      div{
+        padding-right: 50px;
+      }
     }
 
     &-mobile {
