@@ -1,0 +1,547 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixsins.scss" as *;
+
+
+
+
+.cards{
+
+
+&__wrapper{
+  display: grid;
+  grid-template-columns: repeat(3,386px);
+ grid-auto-flow: row;
+  gap: 35px 30px;
+}
+  &__img{
+    background-color: $beige;
+    justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1;
+    border-radius:25px;
+    position: relative;
+  transition: border-radius 0.4s ease;
+    img{
+      width:266px;
+      padding-top: 60px;
+      margin: auto;
+      height: auto;
+        transition: transform 0.4s ease;
+    }
+                     &::after {
+              content: "";
+                /* Залишаємо порожнім, іконки-шрифту більше немає */
+                position: absolute;
+                top: 3px;
+               left:320px;
+              
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: $black;
+                z-index: 2;
+                /* === МАГІЯ ПЛЮСИКА === */
+                background-image:
+                  linear-gradient($white, $white),
+                  /* Вертикальний блок-лінія */
+                  linear-gradient($white, $white);
+                /* Горизонтальний блок-лінія */
+                background-size:
+                  2px 34px,
+                  /* Вертикальна: товщина 2px, висота 20px */
+                  34px 2px;
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                     }
+
+                          &:hover,
+                            &:active {
+                              cursor: pointer; // cite
+                              border-radius: 50%; // cite (Робить контейнер круглим)
+                          
+                              img {
+                                width: 320px;
+                                height: 330px;
+                                transform: rotate(5deg);
+                                position: absolute;
+                                bottom: 40px;
+                                left: 40px;
+                              }
+                          
+                              // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
+                              &::after {
+                                opacity: 1; // cite (Робимо видимим)
+                                visibility: visible; // cite
+                              }
+                            }
+                     
+  }
+  &__informastion{
+    margin-top: 20px;
+    &-title{
+        font-weight: 700;
+      margin: 0;
+        font-size: 24px;
+    }
+    &-size{
+      display: flex;
+      justify-content: space-between;
+        font-weight: 400;
+        font-size: 21px;
+    }
+  }
+
+  &__controls{
+  margin-top: 60px;
+  justify-content: center;
+  align-items:center;
+    display: flex;
+    &-arrow{
+      font-size: 30px;
+      margin:0 50px;
+      cursor: pointer;
+    }
+  &-pagination{
+    display: flex;
+    column-gap:30px;
+  position: static;
+    position: static;
+      width: auto !important;
+   
+span{
+
+        cursor: pointer;
+        transition: 0.3s;
+font-weight: 400;
+font-size: 21px;
+          &:active {
+              background-color: $black;
+              width: 40px;
+              height: 40px;
+              color: $white;
+              text-align: center;
+              border-radius:50%;
+            align-content: center;
+            }
+}
+  }
+    #spn-mobile{
+    display: none;
+  }
+  }
+}
+
+@media screen and (max-width:1700px) {
+  .cards{
+    
+&__wrapper{
+  display: grid;
+  grid-template-columns: repeat(3,375px);
+ grid-auto-flow: row;
+  gap: 35px 30px;
+}
+ &__img {
+   background-color: $beige;
+   justify-content: center;
+   align-items: center;
+   aspect-ratio: 1 / 1;
+   border-radius: 25px;
+   position: relative;
+   transition: border-radius 0.4s ease;
+
+   img {
+     width: 260px;
+     padding-top: 50px;
+     margin: auto;
+     height: auto;
+     transition: transform 0.4s ease;
+   }
+
+   &::after {
+     content: "";
+     /* Залишаємо порожнім, іконки-шрифту більше немає */
+     position: absolute;
+     top: 20px;
+     left: 305px;
+
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background-color: $black;
+     z-index: 2;
+
+     /* === МАГІЯ ПЛЮСИКА === */
+     background-image:
+       linear-gradient($white, $white),
+       /* Вертикальний блок-лінія */
+       linear-gradient($white, $white);
+     /* Горизонтальний блок-лінія */
+
+     background-size:
+       2px 30px,
+       /* Вертикальна: товщина 2px, висота 20px */
+       30px 2px;
+     /* Горизонтальна: ширина 20px, товщина 2px */
+
+     background-position: center;
+     /* Центруємо обидві лінії */
+     background-repeat: no-repeat;
+     /* Щоб вони не розмножувались */
+
+     opacity: 0;
+     visibility: hidden;
+     transition: all 0.3s ease;
+   }
+
+   &:hover,
+   &:active {
+     cursor: pointer; // cite
+     border-radius: 50%; // cite (Робить контейнер круглим)
+
+     img {
+       width: 315px;
+       height: 315px;
+       transform: rotate(5deg);
+       position: absolute;
+       bottom: 30px;
+       left: 30px;
+     }
+
+     // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
+     &::after {
+       opacity: 1; // cite (Робимо видимим)
+       visibility: visible; // cite
+     }
+   }
+ }
+
+ &__informastion {
+   margin-top: 15px;
+
+   &-title {
+     font-weight: 700;
+     margin: 0;
+     font-size: 24px;
+   }
+
+   &-size {
+     display: flex;
+     justify-content: space-between;
+     font-weight: 400;
+     font-size: 21px;
+   }
+ }
+
+ &__controls {
+   margin-top: 50px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+
+   &-arrow {
+     font-size: 30px;
+     margin: 0 50px;
+     cursor: pointer;
+   }
+
+   &-pagination {
+     display: flex;
+     column-gap: 25px;
+     position: static;
+     position: static;
+     width: auto !important;
+
+   }
+ }
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .cards{
+&__wrapper{
+  grid-template-columns: repeat(3,307px);
+  gap: 35px 20px;
+}
+    &__img {
+        background-color: $beige;
+        // padding: 60px;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        border-radius: 25px;
+        position: relative;
+        transition: border-radius 0.4s ease;
+        
+        img {
+          width: 207px;
+          // padding-top: 50px;
+          margin: auto;
+          height: auto;
+          transition: transform 0.4s ease;
+        }
+    
+        &::after {
+          content: "";
+          /* Залишаємо порожнім, іконки-шрифту більше немає */
+          position: absolute;
+          top: 15px;
+          left: 260px;
+    
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $black;
+          z-index: 2;
+    
+          /* === МАГІЯ ПЛЮСИКА === */
+          background-image:
+            linear-gradient($white, $white),
+            /* Вертикальний блок-лінія */
+            linear-gradient($white, $white);
+          /* Горизонтальний блок-лінія */
+    
+          background-size:
+            2px 20px,
+            /* Вертикальна: товщина 2px, висота 20px */
+            20px 2px;
+          /* Горизонтальна: ширина 20px, товщина 2px */
+    
+          background-position: center;
+          /* Центруємо обидві лінії */
+          background-repeat: no-repeat;
+          /* Щоб вони не розмножувались */
+    
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+        }
+    
+        &:hover,
+        &:active {
+          cursor: pointer; // cite
+          border-radius: 50%; // cite (Робить контейнер круглим)
+    
+          img {
+            width: 255px;
+            height: 255px;
+            transform: rotate(5deg);
+            position: absolute;
+            bottom: 35px;
+            left: 35px;
+          }
+    
+          // --- ПОКАЗУЄМО ПЛЮСИК ПРИ НАВЕДЕННІ ---
+          &::after {
+            opacity: 1; // cite (Робимо видимим)
+            visibility: visible; // cite
+          }
+        }
+      }
+
+                &__controls {
+                  margin-top: 50px;
+                  justify-content: center;
+                  align-items: center;
+                  display: flex;
+        
+                  &-pagination {
+                    display: flex;
+                    column-gap: 30px;
+                    position: static;
+                    position: static;
+                    width: auto !important;
+        
+                  }
+                }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .cards{
+&__wrapper{
+  grid-template-columns: repeat(2,354px);
+
+}
+        &__img {
+          // margin-top: 50px;
+          display: flex;
+            background-color: $beige;
+            // padding: 60px;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            border-radius: 25px;
+            position: relative;
+            transition: border-radius 0.4s ease;
+        
+            img {
+              width: 255px;
+              padding-top: 0;
+              margin: auto;
+              height: auto;
+              transition: transform 0.4s ease;
+            }
+                &::after {
+                  content: "";
+                  /* Залишаємо порожнім, іконки-шрифту більше немає */
+                  position: absolute;
+                  top: 15px;
+                  left: 300px;
+        
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background-color: $black;
+                  z-index: 2;
+        
+                  /* === МАГІЯ ПЛЮСИКА === */
+                  background-image:
+                    linear-gradient($white, $white),
+                    /* Вертикальний блок-лінія */
+                    linear-gradient($white, $white);
+                  /* Горизонтальний блок-лінія */
+        
+                  background-size:
+                    2px 20px,
+                    /* Вертикальна: товщина 2px, висота 20px */
+                    20px 2px;
+                  /* Горизонтальна: ширина 20px, товщина 2px */
+        
+                  background-position: center;
+                  /* Центруємо обидві лінії */
+                  background-repeat: no-repeat;
+                  /* Щоб вони не розмножувались */
+        
+                  opacity: 1;
+                  visibility: visible;
+                  transition: all 0.3s ease;
+
+                }
+                &:hover,
+                &:active{
+                  transform:none;
+                }
+   
+          }
+  }
+}
+
+@media screen and (max-width:480px){
+    .cards {
+      &__wrapper{
+  grid-template-columns: repeat(2,210px);
+  gap:25px 20px;
+}
+    &__title{
+      font-size: 40px;
+    }
+        &__img {
+          display: flex;
+          background-color: $beige;
+          // padding: 60px;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 1 / 1;
+          border-radius: 25px;
+          position: relative;
+          transition: border-radius 0.4s ease;
+    
+          img {
+            width: 160px;
+            padding-top: 0;
+            margin: auto;
+            height: auto;
+            transition: transform 0.4s ease;
+          }
+    
+              &::after {
+              content: "";
+              position: absolute;
+              top: 15px;
+              left: 170px;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background-color: $black;
+              z-index: 2;
+              background-image:
+              linear-gradient($white, $white),
+              linear-gradient($white, $white);
+              background-size:
+              2px 15px,
+              15px 2px;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 1;
+             visibility: visible;
+            transition: all 0.3s ease;
+           }
+        }
+        &__informastion{
+          &-title{
+            font-size: 20px;
+          }
+          &-size{
+            font-size: 17px;
+          }
+        }
+        &__controls{
+          margin-top: 40px;
+             &-pagination {
+                    column-gap: 20px;
+                    span{
+            font-size: 17px;
+          &:active {
+              width: 30px;
+              height: 30px;
+            }
+            }
+         }
+        }
+      }
+}
+
+@media screen and (max-width:360px){
+  .cards{
+&__wrapper{
+  display: grid;
+  grid-template-columns: 320px;
+ grid-auto-flow: row;
+  gap: 25px ;
+}
+    &__img{
+      img{
+        width: 240px;
+      }
+          &::after {
+          content: "";
+            position: absolute;
+            top: 15px;
+            left: 270px;
+            width: 40px;
+            height: 40px;
+            background-size:
+            2px 20px,
+            20px 2px;
+       }
+    }
+    &__controls{
+      &-arrow{
+        margin: 0 30px;
+        font-size: 20px;
+      }
+      &-pagination{
+        column-gap:20px;
+      }
+    }
+                #spn-dekstop{
+                  display: none;
+                }
+                #spn-mobile{
+                  display: block;
+                }
+  }
+}
