@@ -121,19 +121,106 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const filterMobileBtn = document.getElementById("filter-mobile");
-    const desktopFilters = document.querySelector(".catalog__desktop");
-    const metaViews = document.querySelector(".catalog__meta-views");
+    const paginationContainer = document.getElementById("pagination-container");
+    const prevArrow = document.querySelector(".arrow-left");
+    const nextArrow = document.querySelector(".arrow-right");
 
-    if (filterMobileBtn) {
-      filterMobileBtn.addEventListener("click", () => {
-        // Перемикаємо клас 'is-open' (додає, якщо немає, і забирає, якщо є)
-        desktopFilters.classList.toggle("is-open");
+    // === НОВЕ: Логіка для карток ===
+    const allCards = document.querySelectorAll(".cards__slide"); // Знаходимо всі картки
+    const cardsPerPage = 9; // СКІЛЬКИ КАРТОК ПОКАЗУВАТИ НА СТОРІНЦІ (можеш змінити на 8 чи 9)
 
-        // Якщо на телефонах іконки приховані, також показуємо їх
-        if (metaViews) {
-          metaViews.classList.toggle("is-open");
+    let currentPage = 1;
+    // Скрипт САМ рахує, скільки потрібно сторінок (заокруглює вгору)
+    // Якщо карток немає, робимо хоча б 1 сторінку
+    let totalPages = Math.ceil(allCards.length / cardsPerPage) || 1;
+
+    // Функція, яка ховає зайві картки і показує потрібні
+    function updateVisibleCards() {
+      // Вираховуємо "індекси": від якої і до якої картки показувати
+      const startIndex = (currentPage - 1) * cardsPerPage;
+      const endIndex = startIndex + cardsPerPage;
+
+      allCards.forEach((card, index) => {
+        // Якщо номер картки потрапляє в наше "вікно" для поточної сторінки
+        if (index >= startIndex && index < endIndex) {
+          card.style.display = "block"; // Показуємо
+        } else {
+          card.style.display = "none"; // Ховаємо
         }
       });
     }
+
+    // Головна функція, яка малює цифри
+    function renderPagination() {
+      let html = "";
+      let startPage, endPage;
+
+      if (currentPage < 5) {
+        startPage = 1;
+        endPage = Math.min(5, totalPages); // Щоб не малювало 5 цифр, якщо сторінок всього 3
+      } else if (currentPage >= 5 && currentPage < totalPages - 1) {
+        startPage = currentPage - 3;
+        endPage = currentPage + 1;
+      } else {
+        startPage = Math.max(1, totalPages - 4);
+        endPage = totalPages;
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        if (i === currentPage) {
+          html += `<span class="page-num active">${i}</span>`;
+        } else {
+          html += `<span class="page-num">${i}</span>`;
+        }
+      }
+
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          html += `<span class="dots">...</span>`;
+        }
+        html += `<span class="page-num">${totalPages}</span>`;
+      }
+
+      paginationContainer.innerHTML = html;
+
+      // === НОВЕ: Щоразу, коли перемальовуємо цифри, оновлюємо і картки! ===
+      updateVisibleCards();
+    }
+
+    // Запускаємо при першому завантаженні сторінки
+    if (paginationContainer) {
+      renderPagination();
+    }
+
+    // --- ОБРОБКА КЛІКІВ ПО ЦИФРАХ ТА СТРІЛКАХ ---
+
+    if (paginationContainer) {
+      paginationContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("page-num")) {
+          currentPage = parseInt(e.target.textContent);
+          renderPagination();
+        }
+      });
+    }
+
+    if (nextArrow) {
+      nextArrow.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderPagination();
+        }
+      });
+    }
+
+    if (prevArrow) {
+      prevArrow.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderPagination();
+        }
+      });
+    }
+
 }); 
+
+

@@ -1,325 +1,1220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warm Heart</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warm Heart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-</head>
-
-<body>
-  <!-- <i data-feather="heart"></i> -->
-<header class="header">
-  <div class="container">
-    <div class="header__wrapper">
-      <div class="header__burger ">
-        <a href="#">
-          <div class="header__burger-mobile">
-            <div class="header__burger-big"></div>
-            <div class="header__burger-medium"></div>
-            <div class="header__burger-big"></div>
+  <body>
+    <!-- <i data-feather="heart"></i> -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__burger">
+            <a href="#">
+              <div class="header__burger-mobile">
+                <div class="header__burger-big"></div>
+                <div class="header__burger-medium"></div>
+                <div class="header__burger-big"></div>
+              </div>
+              <div class="header__burger-desktop">
+                <div><a href="/shop.html">Shop</a></div>
+                <div><a href="">About us</a></div>
+                <div><a href="">Contacts</a></div>
+              </div>
+            </a>
           </div>
-          <div class="header__burger-desktop">
-            <div><a href="/shop.html">Shop</a></div>
-            <div><a href="">About us</a></div>
-            <div><a href="">Contacts</a></div>
+          <div class="header__title">
+            <h1 class="header__title-mobile"><a href="/index.html">wh</a></h1>
+            <h1 class="header__title-desktop">
+              <a href="/index.html">warm heart</a>
+            </h1>
           </div>
-        </a>
+          <div class="header__links">
+            <a href="#">
+              <div class="header__links-mobile">
+                <div class="header__links-search">
+                  <i data-feather="search"></i>
+                </div>
+
+                <div class="header__links-cart">
+                  <i data-feather="shopping-bag"></i>
+                  <span class="header__links-number">(4)</span>
+                </div>
+              </div>
+              <div class="header__links-desktop">
+                <div class="header__links-desktop-search">
+                  <a href="">Search</a>
+                </div>
+                <div class="header__links-desktop-cart">
+                  <a href="">Cart</a>
+                  <span class="header__links-number">(4)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="header__title">
-        <h1 class="header__title-mobile"><a href="/index.html">wh</a></h1>
-        <h1 class="header__title-desktop"><a href="/index.html">warm heart</a></h1>
+    </header>
+
+    <section class="shop">
+      <div class="container">
+        <header class="shop__header">
+          <h1 class="shop__header-title">Shop</h1>
+          <p class="shop__header-text">
+            In our store you will find a large number of high-quality blankets
+            that will help make your home more comfortable and warm your life.
+          </p>
+        </header>
       </div>
-      <div class="header__links">
-        <a href="#">
-          <div class="header__links-mobile">
-            <div class="header__links-search ">
-              <i data-feather="search"></i>
-            </div>
+    </section>
 
-            <div class="header__links-cart">
-              <i data-feather="shopping-bag"></i>
-              <span class="header__links-number">(4)</span>
-            </div>
+    <nav class="catalog">
+      <div class="container">
+        <div class="catalog__wrapper">
+          <div class="catalog__desktop">
+            <details class="catalog__filter" id="filter-desktop">
+              <summary class="catalog__filter-title">
+                Size
+                <span
+                  ><i
+                    class="catalog__filter-icon"
+                    data-feather="chevron-down"
+                  ></i
+                ></span>
+              </summary>
+              <ul class="catalog__filter-list">
+                <li>
+                  130x170 cm
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  130x200 cm
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  140x200 cm
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  150x200 cm
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+              </ul>
+            </details>
 
+            <details class="catalog__filter">
+              <summary class="catalog__filter-title">
+                Color
+                <span
+                  ><i
+                    class="catalog__filter-icon"
+                    data-feather="chevron-down"
+                  ></i
+                ></span>
+              </summary>
+              <ul class="catalog__filter-list">
+                <li>
+                  Grey
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Yellow
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Brown
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Red
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Pink
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Orange
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+              </ul>
+            </details>
+
+            <details class="catalog__filter">
+              <summary class="catalog__filter-title">
+                Material
+                <span
+                  ><i
+                    class="catalog__filter-icon"
+                    data-feather="chevron-down"
+                  ></i
+                ></span>
+              </summary>
+              <ul class="catalog__filter-list">
+                <li>
+                  Synthetics
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Wool
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Cotton
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  Velvet
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+              </ul>
+            </details>
+
+            <details class="catalog__filter">
+              <summary class="catalog__filter-title">
+                Price
+                <span
+                  ><i
+                    class="catalog__filter-icon"
+                    data-feather="chevron-down"
+                  ></i
+                ></span>
+              </summary>
+              <ul class="catalog__filter-list">
+                <li>
+                  €90 - €99
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  €100 - €149
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+                <li>
+                  €150 - €200
+                  <span
+                    ><i
+                      class="catalog__filter-list-icon"
+                      data-feather="plus-circle"
+                    ></i
+                  ></span>
+                </li>
+              </ul>
+            </details>
           </div>
-          <div class="header__links-desktop">
-            <div class="header__links-desktop-search"><a href="">Search</a></div>
-            <div class="header__links-desktop-cart"><a href="">Cart</a>
-              <span class="header__links-number">(4)</span>
+          <div class="catalog__filter-mobile" id="filter-mobile">
+            Filter
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="88"
+              height="82"
+              viewBox="0 0 88 82"
+            >
+              <image
+                href="data:image/png;base64,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"
+                width="88"
+                height="82"
+                image-rendering="crisp-edges"
+              />
+            </svg>
+          </div>
+          <div class="catalog__meta">
+            <span class="catalog__meta-count">187 products</span>
+            <div class="catalog__meta-views">
+              <span
+                ><a href="#cards-grid"
+                  ><i
+                    class="catalog__meta-views-grid"
+                    data-feather="grid"
+                    id="grid-icon"
+                  ></i></a
+              ></span>
+              <span
+                ><a href=""
+                  ><i
+                    class="catalog__meta-views-server"
+                    data-feather="server"
+                    id="server-icon"
+                  ></i></a
+              ></span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
-  
+    </nav>
+    <div class="catalog__active-filters container" id="activeTags"></div>
 
-  <section class="shop">
-    <div class="container">
-          <header class="shop__header">
-            <h1 class="shop__header-title">Shop</h1>
-            <p class="shop__header-text">In our store you will find a large number of high-quality blankets that will help make
-              your home more comfortable and
-              warm your life.</p>
-          </header>
-
-    </div>
-  </section>
-
-          <nav class="catalog">
-            <div class="container">
-              <div class="catalog__wrapper">
-            <div class="catalog__desktop">
-              <details class="catalog__filter" id="filter-desktop">
-                <summary class="catalog__filter-title">Size
-                  <span><i class="catalog__filter-icon" data-feather="chevron-down"></i></span>
-                </summary>
-                <ul class="catalog__filter-list">
-                  <li>130x170 cm
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>130x200 cm
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>140x200 cm
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>150x200 cm
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                </ul>
-              </details>
-          
-              <details class="catalog__filter">
-                <summary class="catalog__filter-title">Color
-                  <span><i class="catalog__filter-icon" data-feather="chevron-down"></i></span>
-                </summary>
-                <ul class="catalog__filter-list">
-                  <li>Grey
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Yellow
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Brown
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Red
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Pink
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Orange
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-          
-                </ul>
-              </details>
-          
-              <details class="catalog__filter">
-                <summary class="catalog__filter-title">Material
-                  <span><i class="catalog__filter-icon" data-feather="chevron-down"></i></span>
-                </summary>
-                <ul class="catalog__filter-list">
-                  <li>Synthetics
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Wool
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Cotton
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>Velvet
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                </ul>
-              </details>
-          
-              <details class="catalog__filter">
-                <summary class="catalog__filter-title">Price
-                  <span><i class="catalog__filter-icon" data-feather="chevron-down"></i></span>
-                </summary>
-                <ul class="catalog__filter-list">
-                  <li>€90 - €99
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>€100 - €149
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                  <li>€150 - €200
-                    <span><i class="catalog__filter-list-icon" data-feather="plus-circle"></i></span>
-                  </li>
-                </ul>
-              </details>
-            </div>
-            <div class="catalog__filter-mobile" id="filter-mobile">
-              Filter <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="82"
-                viewBox="0 0 88 82">
-                <image
-                  href="data:image/png;base64,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"
-                  width="88" height="82" image-rendering="crisp-edges" />
-              </svg> </div>
-              <div class="catalog__meta">
-                <span class="catalog__meta-count">187 products</span>
-                <div class="catalog__meta-views">
-                  
-                <span><a href=""><i class="catalog__meta-views-grid" data-feather="grid" id="grid-icon"></i></a></span>
-                  <span><a href=""><i class="catalog__meta-views-server" data-feather="server" id="server-icon"></i></a></span>
+    <section class="cards" id="cards-grid">
+      <div class="container">
+        <div class="cards__swiper">
+          <div class="cards__wrapper">
+            <!-- 1 -->
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/ingrun.png" alt="ingrun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingrun</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
                 </div>
               </div>
             </div>
-            </div>
-          </nav>
-<div class="catalog__active-filters container" id="activeTags"></div>
 
- <section class="cards">
-  <div class="container">
-    <div class="swiper cards__swiper">
-      <div class="swiper-wrapper cards__wrapper">
-        <!-- 1 -->
-        <div class="swiper-slide cards__slide">
-          <div class="cards__img"><img src="/src/sass/plaids/Gerhild.png" alt="Gerhild"></div>
-          <div class="cards__informastion">
-            <h3 class="cards__informastion-title">Gerhalid</h3>
-            <div class="cards__informastion-size"><span >130x170 cm</span>
-            <span>€90</span>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/mialotta.png" alt="mialotta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Mialotta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/vivianna.png" alt="vivianna" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Vivianna</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€95</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Evail.png" alt="Evail" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Evaili</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Rovaror</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€175</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Helgun.png" alt="Helgun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Helgun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€135</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dagnhild.png" alt="Dagnhild" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dagnhild</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Varkrage.png" alt="Varkrage" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Varkrage</h3>
+                <div class="cards__informastion-size">
+                  <span>110x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dablidun.png" alt="Dablidun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dablidun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€170</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ingabritta.png" alt="Ingabritta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingabritta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€120</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ylvali.png" alt="Ylvali" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ylvali</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Gultall.png" alt="Gultall" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Gultall</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/ingrun.png" alt="ingrun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingrun</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/mialotta.png" alt="mialotta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Mialotta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/vivianna.png" alt="vivianna" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Vivianna</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€95</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Evail.png" alt="Evail" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Evaili</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Rovaror</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€175</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Helgun.png" alt="Helgun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Helgun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€135</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dagnhild.png" alt="Dagnhild" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dagnhild</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Varkrage.png" alt="Varkrage" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Varkrage</h3>
+                <div class="cards__informastion-size">
+                  <span>110x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dablidun.png" alt="Dablidun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dablidun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€170</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ingabritta.png" alt="Ingabritta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingabritta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€120</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ylvali.png" alt="Ylvali" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ylvali</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Gultall.png" alt="Gultall" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Gultall</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/ingrun.png" alt="ingrun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingrun</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/mialotta.png" alt="mialotta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Mialotta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/vivianna.png" alt="vivianna" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Vivianna</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€95</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Evail.png" alt="Evail" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Evaili</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Rovaror</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€175</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Helgun.png" alt="Helgun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Helgun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€135</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dagnhild.png" alt="Dagnhild" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dagnhild</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Varkrage.png" alt="Varkrage" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Varkrage</h3>
+                <div class="cards__informastion-size">
+                  <span>110x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dablidun.png" alt="Dablidun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dablidun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€170</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ingabritta.png" alt="Ingabritta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingabritta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€120</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ylvali.png" alt="Ylvali" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ylvali</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Gultall.png" alt="Gultall" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Gultall</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/ingrun.png" alt="ingrun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingrun</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/mialotta.png" alt="mialotta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Mialotta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/vivianna.png" alt="vivianna" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Vivianna</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€95</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Evail.png" alt="Evail" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Evaili</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Rovaror</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€175</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Helgun.png" alt="Helgun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Helgun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€135</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dagnhild.png" alt="Dagnhild" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dagnhild</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Varkrage.png" alt="Varkrage" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Varkrage</h3>
+                <div class="cards__informastion-size">
+                  <span>110x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dablidun.png" alt="Dablidun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dablidun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€170</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ingabritta.png" alt="Ingabritta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingabritta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€120</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ylvali.png" alt="Ylvali" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ylvali</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Gultall.png" alt="Gultall" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Gultall</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/ingrun.png" alt="ingrun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingrun</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/mialotta.png" alt="mialotta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Mialotta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/vivianna.png" alt="vivianna" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Vivianna</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€95</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Evail.png" alt="Evail" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Evaili</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Rovaror</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€175</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Helgun.png" alt="Helgun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Helgun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€135</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dagnhild.png" alt="Dagnhild" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dagnhild</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Varkrage.png" alt="Varkrage" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Varkrage</h3>
+                <div class="cards__informastion-size">
+                  <span>110x170 cm</span>
+                  <span>€90</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Dablidun.png" alt="Dablidun" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Dablidun</h3>
+                <div class="cards__informastion-size">
+                  <span>150x200 cm</span>
+                  <span>€170</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ingabritta.png" alt="Ingabritta" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ingabritta</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€120</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Ylvali.png" alt="Ylvali" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Ylvali</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__slide">
+              <div class="cards__img">
+                <img src="/src/sass/plaids/Gultall.png" alt="Gultall" />
+              </div>
+              <div class="cards__informastion">
+                <h3 class="cards__informastion-title">Gultall</h3>
+                <div class="cards__informastion-size">
+                  <span>130x170 cm</span>
+                  <span>€110</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="swiper-slide cards__slide">
-          <div class="cards__img"><img src="/src/sass/plaids/Gerhild.png" alt="Gerhild"></div>
-          <div class="cards__informastion">
-            <h3 class="cards__informastion-title">Gerhalid</h3>
-            <div class="cards__informastion-size"><span >130x170 cm</span>
-            <span>€90</span>
-            </div>
+          <div class="cards__controls">
+            <div class="icon-left cards__controls-arrow arrow-left"></div>
+            <div
+              class="cards__controls-pagination"
+              id="pagination-container"
+            ></div>
+            <div class="icon-right cards__controls-arrow arrow-right"></div>
           </div>
         </div>
-        
-          <div class="swiper-slide cards__slide">
-          <div class="cards__img"><img src="/src/sass/plaids/Gerhild.png" alt="Gerhild"></div>
-          <div class="cards__informastion">
-            <h3 class="cards__informastion-title">Gerhalid</h3>
-            <div class="cards__informastion-size"><span >130x170 cm</span>
-            <span>€90</span>
-            </div>
-          </div>
-        </div>
-
-          <div class="swiper-slide cards__slide">
-          <div class="cards__img"><img src="/src/sass/plaids/Gerhild.png" alt="Gerhild"></div>
-          <div class="cards__informastion">
-            <h3 class="cards__informastion-title">Gerhalid</h3>
-            <div class="cards__informastion-size"><span >130x170 cm</span>
-            <span>€90</span>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <div class="cards__controls">
-      <div class=" icon-left cards__controls-arrow arrow-left"></div>
-      <div class=" cards__controls-pagination swiper-pagination">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
-          <span>...</span>
-          <span id="spn-dekstop">16</span>
-          <span id="spn-mobile">24</span>
-      </div>
-      <div class=" icon-right cards__controls-arrow arrow-right "></div>
-      
-      </div>
-    </div>
-  </div>
- </section>
+    </section>
 
+    <section class="last__viewed">
+      <div class="container">
+        <h2 class="last__viewed-title">Last viewed</h2>
+        <div class="last__viewed-preview">
+         <div class="last__viewed-cards"><img src="/src/sass/plaids/Rovaror.png" alt="Rovaror" ></div>
+          <div class="last__viewed-cards"><img src="/src/sass/plaids/Dablidun.png" alt="Dablidun"></div>
+          <div class="last__viewed-cards"><img src="/src/sass/plaids/Evail.png" alt="Evail"></div>
+          <div class="last__viewed-cards"><img src="/src/sass/plaids/Varkrage.png" alt="Varkrage"></div>
+        </div>
+      </div>
+    </section>
 
-  <div class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__links">
-          <h2 class="footer__links-title">warm heart</h2>
-          <div class="footer__links-social">
-            <a href="#"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
-            <a href="#"><i data-feather="youtube"></i></a>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__links">
+            <h2 class="footer__links-title">warm heart</h2>
+            <div class="footer__links-social">
+              <a href="#"><i data-feather="instagram"></i></a>
+              <a href="#"><i data-feather="facebook"></i></a>
+              <a href="#"><i data-feather="youtube"></i></a>
+            </div>
+            <div class="footer__links-privacy">
+              <a href="/index.html">© WARM HEART 2026 </a>
+              <a href="#">Privacy policy</a>
+            </div>
           </div>
-          <div class="footer__links-privacy">
-            <a href="#">© WARM HEART 2025
-            </a>
+          <div class="footer__menu">
+            <details class="accordion">
+              <summary class="accordion__header">
+                Info
+                <span
+                  ><i class="accordion__icon" data-feather="chevron-down"></i
+                ></span>
+              </summary>
+              <div class="accordion__content">
+                <ul class="accordion__list">
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contacts</a></li>
+                  <li><a href="/shop.html">Shop</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="accordion" open>
+              <summary class="accordion__header">
+                Customer service
+                <span
+                  ><i class="accordion__icon" data-feather="chevron-down"></i
+                ></span>
+              </summary>
+              <div class="accordion__content">
+                <ul class="accordion__list">
+                  <li><a href="#">Delivery and pickup</a></li>
+                  <li><a href="#">Payment</a></li>
+                  <li><a href="#">Exchange and return</a></li>
+                  <li><a href="#">Help</a></li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="accordion">
+              <summary class="accordion__header">
+                Useful information
+                <span
+                  ><i class="accordion__icon" data-feather="chevron-down"></i
+                ></span>
+              </summary>
+              <div class="accordion__content">
+                <ul class="accordion__list">
+                  <li><a href="#">Suppliers</a></li>
+                  <li><a href="#">Buying guides</a></li>
+                  <li><a href="#">Principle of operation</a></li>
+                  <li><a href="#">Press service</a></li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          <div class="footer__botton">
+            <a href="#">© WARM HEART 2025 </a>
             <a href="#">Privacy policy</a>
           </div>
         </div>
-        <div class="footer__menu">
-          <details class="accordion">
-            <summary class="accordion__header">
-              Info
-              <span><i class="accordion__icon" data-feather="chevron-down"></i></span>
-            </summary>
-            <div class="accordion__content">
-              <ul class="accordion__list">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="/shop.html">Shop</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
-            </div>
-          </details>
-  
-          <details class="accordion" open>
-            <summary class="accordion__header">
-              Customer service
-              <span><i class="accordion__icon" data-feather="chevron-down"></i></span>
-            </summary>
-            <div class="accordion__content">
-              <ul class="accordion__list">
-                <li><a href="#">Delivery and pickup</a></li>
-                <li><a href="#">Payment</a></li>
-                <li><a href="#">Exchange and return</a></li>
-                <li><a href="#">Help</a></li>
-              </ul>
-            </div>
-          </details>
-  
-          <details class="accordion">
-            <summary class="accordion__header">
-              Useful information
-              <span><i class="accordion__icon" data-feather="chevron-down"></i></span>
-            </summary>
-            <div class="accordion__content">
-              <ul class="accordion__list">
-                <li><a href="#">Suppliers</a></li>
-                <li><a href="#">Buying guides</a></li>
-                <li><a href="#">Principle of operation</a></li>
-                <li><a href="#">Press service</a></li>
-              </ul>
-            </div>
-          </details>
-        </div>
-        <div class="footer__botton">
-          <a href="#">© WARM HEART 2025
-          </a>
-          <a href="#">Privacy policy</a>
-        </div>
       </div>
     </div>
-  </div>
-  <script type="module" src="/src/js/main.js"></script>
-</body>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
 </html>
